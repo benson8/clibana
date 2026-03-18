@@ -34,7 +34,7 @@ type ClibanaConfig struct {
 	PasswordFile string          `arg:"--password-file" help:"Path to file containing password for basic authentication"`
 	CookieFile   string          `arg:"-C,--cookie-file,env:CLIBANA_COOKIE_FILE" help:"Path to Netscape cookie file for cookie-based auth via dashboard proxy"`
 	ServerType   string          `arg:"-S,--server-type,env:CLIBANA_SERVER_TYPE" help:"Server type: opensearch or elasticsearch (auto-detected if not set)"`
-	Password     string          `arg:"-"`
+	Password     string          `arg:"-,env:CLIBANA_PASSWORD"`
 	Debug        bool            `arg:"-d,env:CLIBANA_DEBUG" help:"Enable debug output"`
 	Search       *SearchConfig   `arg:"subcommand:search" help:"Search indices matching the index pattern"`
 	Mappings     *MappingsConfig `arg:"subcommand:mappings" help:"Show field mappings in the indices matching the index pattern"`
